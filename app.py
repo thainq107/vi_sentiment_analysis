@@ -4,7 +4,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import streamlit as st
 from torchtext.data.utils import get_tokenizer
-from torchtext.vocab import build_vocab_from_iterator
+from torchtext import vocab
+from torchtext.vocab import build_vocab_from_iterator, Vocab
 
 tokenizer = get_tokenizer("basic_english")
 idx2label = {0: 'negative', 1:'positive'}
